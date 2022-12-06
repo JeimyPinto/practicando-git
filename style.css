@@ -1,66 +1,123 @@
-* {
+*{
     margin: 0;
-    box-sizing: border-box;
-
+    box-sizing: border-box;    
 }
 
-@media (max-width: 768px) {
+body{
+    font-family: 'Creepster', cursive;
+    padding: 90px 20px 0;
+    background-color: #F2E7D5;    
+}
 
-    body {
-        padding: 90px 20px 0;
+.header{
+    background-color: #393E46;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+ .logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+ }
+ 
+ .nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+ }
+
+ .nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+ }
+
+ .nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+ }
+
+ .nav-menu-link:hover{
+    background-color: #6D9886;
+    transition: 0.5s;
+ }
+ .nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+ }
+
+ .nav-menu-link:hover, .nav-menu-link_active{
+    background-color: #393E46;
+    transition: 0.5s;
+ }
+
+ @media (max-width:768px){
+    body{
+        padding-top: 70px;   
     }
-
-    .header {
-        height: 80px;
-    }
-
-    .logo {
-        font-size: 25px;
+    
+    .header{
+        height: 60px;
+    }    
+    
+     .logo{
+        font-size: 25px;        
         padding: 0 20px;
         line-height: 60px;
-    }
-
-    .nav-menu {
+     }
+     
+     .nav-menu{
         flex-direction: column;
         align-items: center;
         margin-right: 20px;
-        background-color: cyan;
+        background-color: #393E46;
         position: fixed;
-        left: 100%;
+        left: 0;
         top: 60px;
         width: 100%;
         padding: 20px 0;
-        height: calc(100% - 60px);
-        overflow: -y auto;
-        transition: 0.3s;
-    }
-
-    .nav-menu-item {
-        padding: 8px 12px;
-        line-height: 70px;
-    }
-
-    .nav-menu-link {
-        padding: 8px 12px;
-        border-radius: 3px;
-    }
-
-    .nav-menu-link:hover,
-    .nav-menu-link_active {
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: 0.3s;        
+     }
+    
+     .nav-menu-item{        
+        line-height: 70px;        
+     }         
+    
+     .nav-menu-link:hover{
         background: none;
         color: #83c5f7;
-
-    }
-
-    .nav-toggle {
+     }
+     .nav-toggle{
         display: block;
-        cursor: pointer;
-    }
+     }
+     .nav-menu_visible{
 
-
-    body {
-        background-color: red;
-    }
-
-    .nav-menu_visible {}
-}
+     }    
+ }
